@@ -1855,7 +1855,14 @@ Anova <- function(eta.sq = .25, n = 5, min.score = 0, max.score = 25, coef = 1.2
   eps = (sim[1, 2] - sim[1, 1]*mse) / (sim[1, 2] + sim[2, 2])
   lab = c(paste0("subj #", rev(n)[1]), paste0(rep(".", n - 2)), paste0("subj #", 1L))
   
-  par(font.lab = 2, font = 2, mgp = c(2, .2, 0), ...)
+  
+  graphics.off()
+  org.par <- par(no.readonly = TRUE)
+  on.exit(par(org.par))
+  
+  set.margin2()
+  
+  par(font.lab = 2, font = 2, mgp = c(1.3, .2, 0), ...)
   dotchart(y, groups = group, gcol = 2:(k+1), pch = 19, color = (2:(k+1))[group],
            xlab = "Participants' Scores", labels = rep(lab, k)) 
   
@@ -1879,7 +1886,6 @@ Anova <- function(eta.sq = .25, n = 5, min.score = 0, max.score = 25, coef = 1.2
   
   cbind(sim, Pop.Eta.Sq = c(eta.p, NA), Eta.Sq = c(eta, NA), Omega.Sq = c(omega, NA), Epsilon.Sq = c(eps, NA), Power = c(p, NA))
 }
-
 
 #======================================================================================================================================
 
