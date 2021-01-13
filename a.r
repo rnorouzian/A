@@ -1973,7 +1973,7 @@ denscurve <- function(..., adjust = 1, na.rm = TRUE, n = 1e3, hdi = FALSE, level
 
 #=====================================================================================
 
-is.false <- function(x) identical(FALSE, x)
+isFALSE <- function(x) identical(FALSE, x)
 
 #=====================================================================================
        
