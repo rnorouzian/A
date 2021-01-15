@@ -1977,18 +1977,16 @@ isFALSE <- function(x) identical(FALSE, x)
 
 #=====================================================================================
        
-#need <- c('car','psych','reshape','tidyverse','lme4','nlme','MASS','CCA','matrixcalc', 'mvoutlier', 'vegan',
-#          'parallel','rela','gplots','ICSNP','mvtnorm','mvnormtest','normtest', 'micompr', 'heplots', 'HSAUR',
-#          'normwhn.test','nortest','biotools','effects','ez','yacca')
+need <- c('car','psych','tidyverse','effects','ez')
 
-#not.have <- need[!(need %in% installed.packages()[,"Package"])]
-#if(length(not.have)) install.packages(not.have)
+not.have <- need[!(need %in% installed.packages()[,"Package"])]
+if(length(not.have)) install.packages(not.have)
 
 
-#suppressWarnings(
-#suppressMessages({ 
+suppressWarnings(
+suppressMessages({ 
   
-#  for(i in need){
-#    library(i, character.only = TRUE)
-#  }
-#}))       
+  for(i in need){
+    library(i, character.only = TRUE)
+  }
+}))       
