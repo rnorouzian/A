@@ -1862,7 +1862,7 @@ Anova <- function(eta.sq = .25, n = 5, min.score = 0, max.score = 25, coef = 1.2
   
   set.margin2()
   
-  par(font.lab = 2, font = 2, mgp = c(1.3, .2, 0), ...)
+  par(font.lab = 2, font = 2, mgp = c(1.4, .2, 0), ...)
   dotchart(y, groups = group, gcol = 2:(k+1), pch = 19, color = (2:(k+1))[group],
            xlab = "Participants' Scores", labels = rep(lab, k)) 
   
