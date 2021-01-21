@@ -2070,16 +2070,16 @@ samp.dist <- function(n, pop.dist = c('nor','exp','uni','poi','bin','gam','chi',
                  
 #=====================================================================================
        
-need <- c('car','psych','tidyverse','effects','ez')
+need22 <- c('car','psych','tidyverse','effects','ez', 'haven')
 
-not.have <- need[!(need %in% installed.packages()[,"Package"])]
-if(length(not.have)) install.packages(not.have)
+not.have11 <- need22[!(need22 %in% installed.packages()[,"Package"])]
+if(length(not.have11)) install.packages(not.have11)
 
 
 suppressWarnings(
 suppressMessages({ 
   
-  for(i in need){
+  for(i in need22){
     library(i, character.only = TRUE)
   }
 }))       
