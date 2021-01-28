@@ -2070,7 +2070,7 @@ samp.dist <- function(n, pop.dist = c('nor','exp','uni','poi','bin','gam','chi',
                  
 #=====================================================================================
        
-need22 <- c('car','psych','tidyverse','effects','ez', 'haven')
+need22 <- c('car','psych','tidyverse','effects','ez', 'haven', 'rstatix', 'ggpubr')
 
 not.have11 <- need22[!(need22 %in% installed.packages()[,"Package"])]
 if(length(not.have11)) install.packages(not.have11)
