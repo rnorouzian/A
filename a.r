@@ -1825,7 +1825,7 @@ power.f <- Vectorize(function(peta = .2, n.level = 2, design = 2 * 3, sig.level 
 #====================================================================================================================================
 
 
-Anova <- function(eta.sq = .25, n = 5, min.score = 0, max.score = 25, coef = 1.2, sig.level = .05, ...){
+Anova2 <- function(eta.sq = .25, n = 5, min.score = 0, max.score = 25, coef = 1.2, sig.level = .05, ...){
   
   beta = qnorm(c(1e-16, .9999999999999999))
   q = c(min.score, max.score)
