@@ -2125,3 +2125,5 @@ suppressMessages({
     library(i, character.only = TRUE)
   }
 }))       
+
+options(dplyr.summarise.inform = FALSE)                 
